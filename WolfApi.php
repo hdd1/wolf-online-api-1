@@ -21,11 +21,11 @@ class WolfApi{
     /**
      * @param string $model - Имя модели;
      * @param string $method - Имя метода;
-     * @param mixed $data - дополнительные данные (если нужны);
+     * @param mixed $param - дополнительные параметры (если нужны);
      * @return mixed
      */
-    public function execute($model, $method, $data = ''){
-        return $this->request(['model' => $model, 'method' => $method, 'data' => $data]);
+    public function execute($model, $method, $param = ''){
+        return $this->request(['model' => $model, 'method' => $method, 'param' => $param]);
     }
 
     private function request($data){
