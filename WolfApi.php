@@ -5,16 +5,18 @@ class WolfApi{
 
     protected $apiKey;
     protected $idLang;
-    protected $dev = true; // Показывает, какие данные пришли на сервер
+    protected $dev;
 
     /**
      * WolfApi constructor.
      * @param $apiKey - Ваш Ключ API который
      * @param int $id_lang - id языка, на котором будут возвращаться ответы. По умолчанию 1 - русский.
+     * @param bool $devMode - Если true - то в ответе будет показаны данные запроса, которые пришли на сервер.
      */
-    function __construct($apiKey, $id_lang = 1) {
+    function __construct($apiKey, $id_lang = 1, $devMode = false) {
         $this->apiKey = $apiKey;
         $this->idLang = (int)$id_lang;
+        $this->dev = $devMode;
     }
 
     /**
