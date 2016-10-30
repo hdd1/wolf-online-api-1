@@ -73,7 +73,7 @@ class WolfApi{
      * @param $type - Тип ( b2c | b2b | my )
      * @return mixed - Возвращает массив с данными о продукте
      */
-    public function getCostStandart($id_group, $id_product, $id_material, $id_cover, $pages, $quantity, $type){
+    public function getCostStandart($id_group, $id_product, $id_material, $id_cover, $pages, $quantity, $type = 'b2c'){
         return $this->execute('Price', 'getCost', ['id_group' => $id_group, 'id_product' => $id_product, 'id_material' => $id_material, 'id_cover' => $id_cover, 'pages' => $pages, 'quantity' => $quantity, 'type' => $type]);
     }
 
