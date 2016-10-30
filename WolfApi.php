@@ -64,6 +64,21 @@ class WolfApi{
     }
 
     /**
+     * @param $id_group - ID Группы продуктов
+     * @param $id_product - ID продукта
+     * @param $id_material - ID материала
+     * @param $id_cover - ID покрытия
+     * @param $pages - Количтество страниц
+     * @param $quantity - Тираж
+     * @param $type - Тип ( b2c | b2b | my )
+     * @return mixed - Возвращает массив с данными о продукте
+     */
+    public function getCostStandart($id_group, $id_product, $id_material, $id_cover, $pages, $quantity, $type){
+        return $this->execute('Price', 'getCost', ['id_group' => $id_group, 'id_product' => $id_product, 'id_material' => $id_material, 'id_cover' => $id_cover, 'pages' => $pages, 'quantity' => $quantity, 'type' => $type]);
+    }
+
+
+    /**
      * @param string $model - Имя модели;
      * @param string $method - Имя метода;
      * @param mixed $param - дополнительные параметры (если нужны);
