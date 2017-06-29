@@ -19,6 +19,13 @@ class WolfApi{
         $this->dev = $devMode;
     }
 
+    public function getB2CPrice(){
+        return $this->execute('Price', 'getOffsetPrice', ['type' => 'b2c']);
+    }
+    public function getB2BPrice(){
+        return $this->execute('Price', 'getOffsetPrice', ['type' => 'b2b']);
+    }
+
     /**
      * @return mixed - Возвращает массив доступных на сервере языков.
      */
@@ -75,6 +82,10 @@ class WolfApi{
      */
     public function getCostProductStandart($id_group, $id_product, $id_material, $id_cover, $pages, $quantity, $type = 'b2c'){
         return $this->execute('Price', 'getCost', ['id_group' => $id_group, 'id_product' => $id_product, 'id_material' => $id_material, 'id_cover' => $id_cover, 'pages' => $pages, 'quantity' => $quantity, 'type' => $type]);
+    }
+
+    public function getCostProductUV($width, $height, $quantity, $type = 'b2c'){
+        return $this->execute('Price', 'getCost', ['width' => $width, 'height' => $height, 'quantity' => $quantity, 'type' => $type]);
     }
 
 
