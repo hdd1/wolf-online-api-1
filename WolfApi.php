@@ -34,22 +34,6 @@ class WolfApi{
     }
 
     /**
-     * @param $id_group - id Группы
-     * @param string $type - тип ценообразования: b2c - Цены для всех; b2b - цены для посредников; my - Свои цены (с учетом скидок, если есть);
-     * @return mixed - Возвращает массив прайс-листа по id группы
-     */
-    public function getPriceByGroup($id_group, $type = 'b2c'){
-        return $this->execute('Price', 'getPriceByGroup', ['id_group' => (int)$id_group, 'type' => (string)$type]);
-    }
-
-    /**
-     * @return mixed - Возвращает массив Групп Продуктов
-     */
-    public function getAllGroups(){
-        return $this->execute('GroupProduct', 'getAllGroup');
-    }
-
-    /**
      * @return mixed - Возвращает массив Покрытий для продуктов
      */
     public function getAllCover(){
@@ -69,25 +53,6 @@ class WolfApi{
     public function getAllProduct(){
         return $this->execute('Product', 'getAllProduct');
     }
-
-    /**
-     * @param $id_group - ID Группы продуктов
-     * @param $id_product - ID продукта
-     * @param $id_material - ID материала
-     * @param $id_cover - ID покрытия
-     * @param $pages - Количтество страниц
-     * @param $quantity - Тираж
-     * @param $type - Тип ( b2c | b2b | my )
-     * @return mixed - Возвращает массив с данными о продукте
-     */
-    public function getCostProductStandart($id_group, $id_product, $id_material, $id_cover, $pages, $quantity, $type = 'b2c'){
-        return $this->execute('Price', 'getCost', ['id_group' => $id_group, 'id_product' => $id_product, 'id_material' => $id_material, 'id_cover' => $id_cover, 'pages' => $pages, 'quantity' => $quantity, 'type' => $type]);
-    }
-
-    public function getCostProductUV($width, $height, $quantity, $type = 'b2c'){
-        return $this->execute('Price', 'getCost', ['width' => $width, 'height' => $height, 'quantity' => $quantity, 'type' => $type]);
-    }
-
 
     /**
      * @param string $model - Имя модели;
