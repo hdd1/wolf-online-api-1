@@ -18,6 +18,10 @@ https://github.com/hdd1/wolf-online-api-1/archive/master.zip
 ```php
 $api = new WolfApi('Ваш_ключ_API');
 ```
+## Получить офсетный прайс
+```php
+$result = $api->getB2CPrice();
+```
 ## Вызов произвольного метода
 ```php
 $result = $api->execute('Имя_модели', 'Имя_метода', 'Дополнительные_параметры');
