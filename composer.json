@@ -1,5 +1,5 @@
 {
-  "name": "wolf-online-api",
+  "name": "wolf-online-api/wolf-online-api",
   "description": "Класс предоставляет доступ к функциям API 1.0 интернет-магазина \"Полиграфия Онлайн\" от Типографии Вольф",
   "version": "1.0",
   "require": {
