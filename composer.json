@@ -3,7 +3,7 @@
   "description": "Класс предоставляет доступ к функциям API 1.0 интернет-магазина \"Полиграфия Онлайн\" от Типографии Вольф",
   "homepage": "https://github.com/hdd1/wolf-online-api-1",
   "version": "1.0",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "require": {
     "php": ">=5.3.0"
   },
