@@ -67,7 +67,7 @@ class WolfApi{
 
     private function request($data){
 
-        $url = 'http://api.wolf.ua/v1/';
+        $url = 'https://api.wolf.ua/v1/';
         $data['dev'] = $this->dev;
         $data = json_encode($data);
         $ch = curl_init($url);
